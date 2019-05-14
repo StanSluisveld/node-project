@@ -18,5 +18,5 @@ exports.createStore = async (req, res) => {
 exports.getStores = async (req, res) => {
     //1. query database for a list of all stores
     const stores = await Store.find();
-    res.render('stores', { title: 'Stores', stores});
+    res.render('stores', { title: 'Stores', stores}); // if prop is the same as variable only send var 
 };
