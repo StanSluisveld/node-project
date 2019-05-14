@@ -2,7 +2,12 @@ mixin storeCard(store = {})
     .store
         .store__hero
             .store__actions
-                button soon
+                .store__action.score__action--edit
+                    a(href=`/stores/${store._id}/edit`)
+                        // svg in helper.js function
+                        // != means write html
+                        != h.icon('pencil')
+
             img(src=`/uploads/${store.photo || 'store.png'}`)
             h2.title
                 a(href=`/store/${store.slug}`) #{store.name}
