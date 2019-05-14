@@ -1,0 +1,14 @@
+//- .wrapper
+//-     // js var in pug
+//-     - const newName = name.toUpperCase();
+
+
+//-     h2
+//-         | Hello #{name}
+//-         em xD
+//-     img(scr="koning" alt=`koning ${newName}`)
+
+extends layout
+
+block content
+    h2 sale ends in #{h.moment().endOf('day').fromNow()}
